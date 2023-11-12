@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find prizm_ros)/launch/twist_controller.launch"/>
+  <include file="$(find lidar2d)/launch/hlds.launch"/>
+  <include file="$(find lidar2d)/launch/interact.launch"/>
+  <include file="$(find example_laser_filters)/launch/filtered_lidar.launch"/>
+
+  <node name="move_to_obj" pkg="move_to_obj" type="move_to_object.py" output="screen">
+  </node>
+
+</launch>
